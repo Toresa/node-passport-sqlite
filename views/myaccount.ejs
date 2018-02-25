@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <a href="/">Home</a><br/><br/>  
-    <h1><%= title %></h1>
-    <p>Welcome <%= user.username %>. You registered on <%= user.created%></p>
-    <a href="/logout">Logout</a><br/>
-  </body>
-</html>
+     <%- include partials/header %>  
+      <body>
+        <%- include partials/navbar %>      
+        <main role="main" class="container">
+          <div class="jumbotron">
+            <h1>User info</h1>
+            <p>Welcome <%= user.username %>. You registered on <%= user.created%></p>
+            <a href="/logout">Logout</a><br/>
+          </div>
+        </main>
+      </body>
+    <%- include partials/footer %>

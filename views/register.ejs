@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+ <%- include partials/header %>  
   <body>
-      <a href="/">Home</a><br/><br/>
-    <form method="post" action="/register">
-        <input type="text" name="email" placeholder="email">
-        <input type="text" name="password" placeholder="password">
-        <input type="text" name="confirmpassword" placeholder="confirm password">
-        <input type="submit" value="Register">
-    </form>
+    <%- include partials/navbar %>      
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <h1>Create user</h1>
+         <form method="post" action="/register" class="form-inline">
+            <input type="text" class="form-control mr-sm-2" name="email" placeholder="email">
+            <input type="text" class="form-control mr-sm-2" name="password" placeholder="password">
+            <input type="text" class="form-control mr-sm-2" name="confirmpassword" placeholder="confirm password">
+            <input type="submit" class="btn btn-outline-default my-2 my-sm-0" value="Register">
+        </form>
+      </div>
+    </main>
   </body>
-</html>
+<%- include partials/footer %>
